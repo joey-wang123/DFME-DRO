@@ -3,8 +3,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from cifar10_models.noise_layer import noise_Conv2d, noise_Linear
-from network.noise_layer import data_dependent_Conv2d
+from cifar10_models.noise_layer import noise_Conv2d
 import random
 from perturbnet import *
 

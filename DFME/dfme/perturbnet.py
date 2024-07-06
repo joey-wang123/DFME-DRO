@@ -133,8 +133,7 @@ class Res2Net(torch.nn.Module):
     def forward_original(self, x):                
         x = (self.block1(x) * self.epsilon) 
         x = (self.block2(x) * self.epsilon) 
-        # x = (self.block3(x) * self.epsilon) + x
-        # x = (self.block4(x) * self.epsilon) + x
+
         return x
 
     def forward(self, x):

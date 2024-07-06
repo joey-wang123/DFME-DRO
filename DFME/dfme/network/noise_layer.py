@@ -25,8 +25,6 @@ class noise_Conv2d(nn.Conv2d):
             std = self.weight.std().item()
             noise = self.weight.clone().normal_(0,std)*scale
 
-        # noise_weight = self.weight + self.alpha_w * noise * self.w_noise
-        print('no random')
         noise_weight = self.weight
         output = F.conv2d(input, noise_weight, self.bias, self.stride, self.padding, self.dilation,
                         self.groups)

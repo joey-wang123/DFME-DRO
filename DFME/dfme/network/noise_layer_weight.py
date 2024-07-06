@@ -21,7 +21,6 @@ class noise_Conv2d(nn.Conv2d):
     def forward(self, input):
 
         scale = self.new
-        # print('random scale', scale)
         with torch.no_grad():
             std = self.weight.std().item()
             noise = self.weight.clone().normal_(0,std)*scale
